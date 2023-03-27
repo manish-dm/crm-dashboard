@@ -8,7 +8,7 @@ import {
   DoubleRightOutlined,
 } from "@ant-design/icons";
 import { Dropdown, Layout, theme as antTheme, Tooltip } from "antd";
-import ReactSvg from "../../assets/react.svg";
+import logoPng from "../../assets/logo.png";
 
 const { Header } = Layout;
 const device = "DESKTOP";
@@ -25,7 +25,7 @@ const HeaderComponent = () => {
     <Header className="layout-page-header bg-2">
       {device !== "MOBILE" && (
         <div className="logo">
-          <img src={ReactSvg} alt="" />
+          <img src={logoPng} alt="" />
         </div>
       )}
       <div className="layout-page-header-main">
