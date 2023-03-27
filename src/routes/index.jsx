@@ -15,6 +15,26 @@ const routeList = [
         path: "dashboard",
         element: <Dashboard />,
       },
+      {
+        path: "employees",
+        element: <div>Employee Page</div>,
+      },
+      {
+        path: "finance",
+        element: <div>Finance Page</div>,
+      },
+      {
+        path: "component/form",
+        element: <div>Form Page</div>,
+      },
+      {
+        path: "component/table",
+        element: <div>table Page</div>,
+      },
+      {
+        path: "component/tabs",
+        element: <div>tabs Page</div>,
+      },
     ],
   },
 ];

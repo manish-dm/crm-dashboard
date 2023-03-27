@@ -63,3 +63,7 @@ body {
   height: 100%;
   cursor: pointer;
 }
+
+#sidebar-trigger {
+  cursor: pointer;
+}

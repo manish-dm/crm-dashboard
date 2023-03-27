@@ -5,33 +5,31 @@ import {
   BellOutlined,
   MailOutlined,
   MenuOutlined,
-  DoubleRightOutlined,
+  ArrowRightOutlined,
 } from "@ant-design/icons";
-import { Dropdown, Layout, theme as antTheme, Tooltip } from "antd";
+import { Dropdown, Layout } from "antd";
 import logoPng from "../../assets/logo.png";
+import { useSelector } from "react-redux";
 
 const { Header } = Layout;
-const device = "DESKTOP";
-const collapsed = false;
 
-const HeaderComponent = () => {
-  const toggle = () => {
-    console.log("toggle");
-  };
+const HeaderComponent = ({ collapsed, toggle }) => {
+  const { device } = useSelector((state) => state.user);
+
   const toLogin = () => {
     console.log("login");
   };
   return (
     <Header className="layout-page-header bg-2">
       {device !== "MOBILE" && (
-        <div className="logo">
+        <div className="logo" style={{ width: collapsed ? 80 : 200 }}>
           <img src={logoPng} alt="" />
         </div>
       )}
       <div className="layout-page-header-main">
         <div onClick={toggle}>
           <span id="sidebar-trigger">
-            {collapsed ? <DoubleRightOutlined /> : <MenuOutlined />}
+            {collapsed ? <ArrowRightOutlined /> : <MenuOutlined />}
           </span>
         </div>
         <div className="actions">
