@@ -7,7 +7,7 @@ import {
   MenuOutlined,
   ArrowRightOutlined,
 } from "@ant-design/icons";
-import { Dropdown, Layout } from "antd";
+import { Dropdown, Layout, Menu } from "antd";
 import logoPng from "../../assets/logo.png";
 import { useSelector } from "react-redux";
 
@@ -29,7 +29,15 @@ const HeaderComponent = ({ collapsed, toggle }) => {
       <div className="layout-page-header-main">
         <div onClick={toggle}>
           <span id="sidebar-trigger">
-            {collapsed ? <ArrowRightOutlined /> : <MenuOutlined />}
+            {collapsed ? (
+              device === "MOBILE" ? (
+                <MenuOutlined />
+              ) : (
+                <ArrowRightOutlined />
+              )
+            ) : (
+              <MenuOutlined />
+            )}
           </span>
         </div>
         <div className="actions">

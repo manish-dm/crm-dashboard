@@ -1,4 +1,5 @@
 import { useState, useEffect, Suspense } from "react";
+import "./index.css";
 import { Drawer, Layout } from "antd";
 import HeaderComponent from "./Header";
 import MenuComponent from "./Menu";
